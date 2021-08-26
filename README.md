@@ -7,7 +7,7 @@ Simple chat box written in kotlin, requires a redis server
 - Easy to use & setup
 
 ## Compilation
-Use gradle shadowJar!
+Use `gradle shadowJar`!
 
 ## Download
 Check releases for a download which is connected to a development redis server.
