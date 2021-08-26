@@ -8,13 +8,13 @@ import java.util.*
 object ChatBoxConstants {
 
     @JvmStatic
-    val REDIS_HOST: String = "redis-11978.c261.us-east-1-4.ec2.cloud.redislabs.com"
+    val REDIS_HOST: String = "localhost"
 
     @JvmStatic
-    val REDIS_PORT: Int = 11978
+    val REDIS_PORT: Int = 6379
 
     @JvmStatic
-    val REDIS_PASSWORD: Optional<String> = Optional.ofNullable("7KgoHJcVBIu32Q3kDTseOQ7gwAGirlyG")
+    val REDIS_PASSWORD: Optional<String> = Optional.ofNullable(null)
 
     @JvmStatic
     val REDIS_CACHE_ONLINE: String = "chat_box_online"
