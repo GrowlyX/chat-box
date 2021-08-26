@@ -1,0 +1,38 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'application'
+    id 'java'
+}
+
+group 'com.solexgames'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'org.chatbox.ChatBoxApplication'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.21'
+
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation group: 'redis.clients', name: 'jedis', version: '2.8.0'
+
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+shadowJar {
+    archiveClassifier.set("")
+}
+
+tasks.build.dependsOn(shadowJar)
+
+test {
+    useJUnitPlatform()
+}
